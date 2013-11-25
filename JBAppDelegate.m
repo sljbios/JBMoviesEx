@@ -10,11 +10,13 @@
 
 @implementation JBAppDelegate
 
+@synthesize movieListController;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.movieListController = [[JBMovieListViewController alloc] initWithNibName:nil bundle:nil];
+    movieListController = [[JBMovieListViewController alloc] initWithNibName:nil bundle:nil];
     self.window.rootViewController = self.movieListController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
